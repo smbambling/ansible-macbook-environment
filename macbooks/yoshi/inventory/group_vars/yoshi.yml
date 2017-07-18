@@ -9,6 +9,9 @@ downloads: ~/.ansible-downloads/
 
 dockitems_enabled: []
 dockitems_disabled:
+downloads: ~/.ansible-downloads/
+
+dockitems_to_remove:
   - Siri
   - Launchpad
   - Contacts
@@ -46,6 +49,7 @@ homebrew_installed_packages:
   - npm
   - nvm
   - packer
+  - python
   - ssh-copy-id
   - readline
   - rename
@@ -71,14 +75,10 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - 1password
   - alfred
-  - atom
-  - authy-desktop
-  - bartender
   - burn
   - docker
   - dropbox
   - easysimbl
-  - filezilla
   - firefox
   - google-chrome
   - gpgtools
@@ -87,17 +87,17 @@ homebrew_cask_apps:
   - kdiff3
   - little-snitch
   - macdown
-  - macvim
   - makemkv
   - qblocker
   - ripit
   - totalspaces
   - tunnelblick
+  - ripit
+  - totalspaces
   - unrarx
   - slack
   - the-unarchiver
   - vagrant
   - virtualbox
-  - vlc
   - vmware-fusion
   - xquartz
