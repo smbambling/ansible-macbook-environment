@@ -1,0 +1,22 @@
+---
+- name: Install powerline fonts and bindings
+  hosts: all
+  become: False
+  
+  tasks:
+    - name: Install powerline as a local python package
+      pip:
+        name: git+https://github.com/Lokaltog/powerline
+        extra_args:
+          - user
+
+    - name: Clone the patched fonts
+      git:
+        repo: https://github.com/powerline/fonts.git
+        dest: ~/.font/sources
+        version: master
+
+    - name: Run the patched font installer
+      command: ~/.font/sources/fonts/install.sh
+      register: pline_finstall_out
+

@@ -1,13 +1,5 @@
 #!/usr/bin/env bash
 
-#if brew ls --versions openssl > /dev/null; then
-#    echo "Detected $OS..."
-#    echo "Setting needed ENV to build psycopg2..."
-#    export LDFLAGS="-L/usr/local/opt/openssl/lib"
-#    export CPPFLAGS="-I/usr/local/opt/openssl/include"
-#    export PKG_CONFIG_PATH="/usr/local/opt/openssl/lib/pkgconfig"
-#fi
-
 #######################
 #  Dependency Checks  #
 #######################
