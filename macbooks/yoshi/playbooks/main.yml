@@ -1,6 +1,17 @@
 ---
-- hosts: yoshi
+- name: Install the yoshi testing stuff
+  hosts: yoshi
   connection: local
+
+  #Homebrew actually recommend
+  pre_tasks:
+    - name: Overcome /usr/local perms issues
+      file:
+        path: /usr/local
+        state: directory
+        mode: 775
+        owner: root
+        group: admin
 
   roles:
     - {role: fonts}
