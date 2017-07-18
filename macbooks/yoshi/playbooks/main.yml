@@ -1,15 +1,15 @@
 ---
-  - hosts: yoshi 
-    connection: local
+- hosts: yoshi
+  connection: local
 
-    roles:
-      - {role: geerlingguy.homebrew}
+  roles:
+    - {role: geerlinguy.homebrew}
 
-    post_tasks:
-      - name: Set zsh as shell
-        command: defaults write com.apple.Terminal 'Shell' -string '/bin/zsh'
+  post_tasks:
+    - name: Set zsh as shell
+      command: defaults write com.apple.Terminal 'Shell' -string '/bin/zsh'
 
-      - name: Remove all crap from Dock
-        command: dockutil --remove '{{ item }}'
-        ignore_errors: true
-        with_items: "{{ dockitems_to_remove }}"
+    - name: Remove all crap from Dock
+      command: dockutil --remove '{{ item }}'
+      ignore_errors: true
+      with_items: "{{ dockitems_to_remove }}"
