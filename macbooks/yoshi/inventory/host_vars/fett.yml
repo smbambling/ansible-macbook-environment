@@ -11,6 +11,9 @@ dockitems_to_remove:
   - Photos
   - Messages
   - FaceTime
+  - Pages
+  - Numbers
+  - Keynote
   - iTunes
   - iBooks
   - App Store

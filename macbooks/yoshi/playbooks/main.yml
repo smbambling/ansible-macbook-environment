@@ -1,5 +1,5 @@
 ---
-  - hosts: fett
+  - hosts: yoshi 
     connection: local
 
     roles:
@@ -7,9 +7,9 @@
 
     post_tasks:
       - name: Set zsh as shell
-        shell: defaults write com.apple.Terminal 'Shell' -string '/bin/zsh'
+        command: defaults write com.apple.Terminal 'Shell' -string '/bin/zsh'
 
       - name: Remove all crap from Dock
-        shell: dockutil --remove '{{ item }}'
+        command: dockutil --remove '{{ item }}'
         ignore_errors: true
-        with_items: dockitems_to_remove
+        with_items: "{{ dockitems_to_remove }}"
