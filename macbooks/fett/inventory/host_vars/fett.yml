@@ -1,0 +1,90 @@
+---
+downloads: ~/.ansible-downloads/
+
+dockitems_to_remove:
+  - Siri
+  - Launchpad
+  - Contacts
+  - Notes
+  - Reminders
+  - Maps
+  - Photos
+  - Messages
+  - FaceTime
+  - iTunes
+  - iBooks
+  - App Store
+  - System Preferences
+
+homebrew_installed_packages:
+  - autoconf
+  - aspell
+  - augeas
+  - colordiff
+  - dockutil
+  - fabric
+  - geoip
+  - gawk
+  - git
+  - hub
+  - ipcalc
+  - iperf
+  - jq
+  - minicom
+  - mtr
+  - nmap
+  - npm
+  - nvm
+  - packer
+  - ssh-copy-id
+  - readline
+  - rename
+  - shellcheck
+  - speedtest_cli
+  - ssh-copy-id
+  - task
+  - tig
+  - tmux
+  - watch
+  - weechat
+  - wget
+  - zsh-completions
+
+homebrew_taps:
+  - homebrew/core
+  - caskroom/cask
+  - homebrew/binary
+  - homebrew/dupes
+  - homebrew/versions
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - alfred
+  - atom
+  - burn
+  - docker
+  - dropbox
+  - easysimbl
+  - filezilla
+  - firefox
+  - google-chrome
+  - gpgtools
+  - handbrake
+  - istat-menus
+  - kdiff3
+  - little-snitch
+  - macdown
+  - macvim
+  - makemkv
+  - logitech-myharmony
+  - ripit
+  - totalspaces
+  - tunnelblick
+  - unrarx
+  - slack
+  - the-unarchiver
+  - vagrant
+  - virtualbox
+  - vlc
+  - vmware-fusion
+  - xquartz

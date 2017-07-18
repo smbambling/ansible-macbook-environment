@@ -1,0 +1,4 @@
+- src: https://github.com/geerlingguy/ansible-role-homebrew.git
+  name: geerlinguy.homebrew
+  version: 363678e # tag: 2.2.4
+  path: galaxy_roles
