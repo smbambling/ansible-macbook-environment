@@ -52,15 +52,15 @@ for cmd in "${virtenv_cmd_list[@]}"; do
   cmd_exists "${cmd[@]}"
   # shellcheck disable=SC2181
   if [ $? -ne 0 ]; then
-    echo "Installing Python PIP via Easy_Install"
-    sudo easy_install pip
+    echo "Installing Python virtualenv via PIP"
+    sudo pip install virtualenv
   fi
 done
 
 # Check to see if the xcode commandline tools are installed
 # This will prompt the users to install if required
 if ! xcode-select -p >&/dev/null; then
-  echo 'Installing xcode'
+  echo 'Installing XCODE'
   touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
   PROD=$(softwareupdate -l |
     grep "\*.*Command Line" |
