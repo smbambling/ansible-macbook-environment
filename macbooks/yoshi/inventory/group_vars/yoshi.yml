@@ -27,7 +27,6 @@ dockitems_disabled:
   - System Preferences
 
 homebrew_installed_packages:
-  - authy-desktop
   - autoconf
   - aspell
   - augeas
@@ -72,6 +71,7 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - alfred
   - atom
+  - authy-desktop
   - bartender
   - burn
   - docker
