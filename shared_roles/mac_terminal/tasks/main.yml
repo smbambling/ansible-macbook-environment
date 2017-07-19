@@ -5,7 +5,7 @@
   changed_when: false
 
 - name: Ensure custom Terminal profile is added.
-  command: open files/Peppermint.terminal
+  command: open "{{ role_path }}/files/Peppermint.terminal"
   changed_when: false
   when: "'Peppermint' not in terminal_theme.stdout"
 
