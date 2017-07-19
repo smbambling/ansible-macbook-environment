@@ -1,0 +1,3 @@
+---
+- name: Patched font installer
+  shell: sh ~/.font/sources/powerline_fonts/install.sh

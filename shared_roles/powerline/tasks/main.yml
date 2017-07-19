@@ -1,0 +1,14 @@
+---
+- name: Install powerline as a local python package
+  pip:
+    name: powerline-status
+    executable: /usr/local/bin/pip2
+    editable: False
+    extra_args: --user
+
+- name: Clone the patched fonts
+  git:
+    repo: https://github.com/powerline/fonts.git
+    dest: ~/.font/sources/powerline_fonts
+    version: master
+  notify: Patched font installer

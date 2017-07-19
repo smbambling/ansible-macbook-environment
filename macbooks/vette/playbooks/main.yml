@@ -1,0 +1,36 @@
+---
+- name: Install the yoshi testing stuff
+  hosts: vette
+  connection: local
+    
+  #Homebrew actually recommend
+  pre_tasks:
+    - name: Overcome /usr/local perms issues
+      file:
+        path: /usr/local
+        state: directory
+        mode: 0775
+        owner: root
+        group: admin
+      become: True
+
+    - name: make sure the sources dir exists
+      file:
+        path: ~/sources
+        state: directory
+        mode: 0755
+        owner: "{{ ansible_user_id }}"
+
+  roles:
+    - {role: geerlingguy.homebrew}
+    - {role: geerlingguy.dotfiles}
+    - {role: oh-my-zsh}
+    - {role: powerline}
+    - {role: tmux}
+    - {role: pathogen}
+    - {role: mac_terminal}
+    - {role: fubarhouse.macdock}
+
+  post_tasks:
+    - name: Set zsh as shell
+      command: defaults write com.apple.Terminal 'Shell' -string '/bin/zsh'

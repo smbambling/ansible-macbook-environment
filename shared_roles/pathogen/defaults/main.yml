@@ -1,0 +1,4 @@
+---
+pathogen_vim_plugins:
+  vim-sensible:
+    source: https://github.com/tpope/vim-sensible.git
