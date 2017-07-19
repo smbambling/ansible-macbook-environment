@@ -2,6 +2,9 @@
 my_fonts:
   - hack
 
+terminal_profiles:
+  - Peppermint
+
 downloads: ~/.ansible-downloads/
 
 dockitems_to_remove:

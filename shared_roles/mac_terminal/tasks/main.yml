@@ -5,14 +5,20 @@
   changed_when: false
 
 - name: Ensure custom Terminal profile is added.
-  command: open "{{ role_path }}/files/Peppermint.terminal"
+  command: open "{{ role_path }}/files/{{ item }}.terminal"
   changed_when: false
-  when: "'Peppermint' not in terminal_theme.stdout"
+  when: "'{{ item }}' not in terminal_theme.stdout"
+  with_items: "{{ terminal_profiles }}"
 
-- name: Ensure custom Terminal profile is set as default.
-  command: "{{ item }}"
-  with_items:
-    - defaults write com.apple.Terminal 'Default Window Settings' -string 'Peppermint'
-    - defaults write com.apple.Terminal 'Startup Window Settings' -string 'Peppermint'
+- name: Set Terminal profile is set as default window.
+  command: "defaults write com.apple.Terminal 'Default Window Settings' -string '{{ item }}'"
   changed_when: false
-  when: "'Peppermint' not in terminal_theme.stdout"
+  when: "'{{ item }}' not in terminal_theme.stdout"
+  with_items: "{{ terminal_profiles }}"
+
+- name: Set Terminal profile is set as default startup window.
+  command: "defaults write com.apple.Terminal 'Startup Window Settings' -string '{{ item }}'"
+  changed_when: false
+  when: "'{{ item }}' not in terminal_theme.stdout"
+  with_items: "{{ terminal_profiles }}"
+
