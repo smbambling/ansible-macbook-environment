@@ -1,0 +1,15 @@
+---
+- name: Install the terminal plist files
+  hosts: yoshi
+  become: False
+  tasks:
+    - name: Copy the Terminal.plist file to /tmp
+      copy:
+        src: files/Terminal.plist
+        dest: /tmp/Terminal.plist
+        owner: "{{ ansible_user_id }}"
+        mode: 0644
+
+   - name: Import the terminal with defaults
+     command: defaults import com.apple.Terminal /tmp/Terminal.plist
+     changed_when: False
