@@ -4,6 +4,7 @@
 
   roles:
     - {role: geerlinguy.homebrew}
+    - {role: mac_terminal}
 
   post_tasks:
     - name: Set zsh as shell
@@ -17,21 +18,3 @@
     - name: Check if items in dock exist
       command: dockutil --find '{{ item.name }}' || dockutil --add '{{ item.path }}'
       with_items: "{{ dockitems_to_persist }}"
-
-    - name: Get current Terminal profile.
-      shell: defaults read com.apple.Terminal 'Default Window Settings'
-      register: terminal_theme
-      changed_when: false
-
-    - name: Ensure custom Terminal profile is added.
-      shell: open files/Peppermint.terminal
-      changed_when: false
-      when: "'Peppermint' not in terminal_theme.stdout"
-
-    - name: Ensure custom Terminal profile is set as default.
-      shell: "{{ item }}"
-      with_items:
-        - defaults write com.apple.Terminal 'Default Window Settings' -string 'Peppermint'
-        - defaults write com.apple.Terminal 'Startup Window Settings' -string 'Peppermint'
-      changed_when: false
-      when: "'Peppermint' not in terminal_theme.stdout"

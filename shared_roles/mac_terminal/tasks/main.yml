@@ -1,0 +1,18 @@
+---
+- name: Get current Default Terminal profile.
+  command: defaults read com.apple.Terminal 'Default Window Settings'
+  register: terminal_theme
+  changed_when: false
+
+- name: Ensure custom Terminal profile is added.
+  command: open files/Peppermint.terminal
+  changed_when: false
+  when: "'Peppermint' not in terminal_theme.stdout"
+
+- name: Ensure custom Terminal profile is set as default.
+  command: "{{ item }}"
+  with_items:
+    - defaults write com.apple.Terminal 'Default Window Settings' -string 'Peppermint'
+    - defaults write com.apple.Terminal 'Startup Window Settings' -string 'Peppermint'
+  changed_when: false
+  when: "'Peppermint' not in terminal_theme.stdout"
