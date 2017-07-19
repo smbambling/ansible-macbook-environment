@@ -1,4 +1,7 @@
 ---
+my_fonts:
+  - hack
+
 downloads: ~/.ansible-downloads/
 
 dockitems_to_remove:

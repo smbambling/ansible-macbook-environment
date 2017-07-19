@@ -1,0 +1,10 @@
+---
+- name: Download Hack Font
+  get_url:
+    url: https://github.com/chrissimpkins/Hack/releases/download/v2.020/Hack-v2_020-ttf.zip
+    dest: /tmp/hack_font
+
+- name: Install Hack Font
+  unarchive:
+    src: /tmp/hack_font.zip
+    dest: /Library/Fonts

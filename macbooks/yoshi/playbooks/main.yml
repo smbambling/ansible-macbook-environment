@@ -3,6 +3,7 @@
   connection: local
 
   roles:
+    - {role: fonts}
     - {role: geerlinguy.homebrew}
     - {role: mac_terminal}
 
