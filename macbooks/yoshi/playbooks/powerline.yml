@@ -1,6 +1,7 @@
 ---
 - name: Install powerline fonts and bindings
   hosts: yoshi
+  connection: local
   become: False
   
   tasks:
