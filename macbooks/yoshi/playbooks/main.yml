@@ -6,16 +6,8 @@
     - {role: fonts}
     - {role: geerlinguy.homebrew}
     - {role: mac_terminal}
+    - {role: fubarhouse.macdock}
 
   post_tasks:
     - name: Set zsh as shell
       command: defaults write com.apple.Terminal 'Shell' -string '/bin/zsh'
-
-    - name: Remove all crap from Dock
-      command: dockutil --remove '{{ item }}'
-      ignore_errors: true
-      with_items: "{{ dockitems_to_remove }}"
-
-    - name: Check if items in dock exist
-      command: dockutil --find '{{ item.name }}' || dockutil --add '{{ item.path }}'
-      with_items: "{{ dockitems_to_persist }}"

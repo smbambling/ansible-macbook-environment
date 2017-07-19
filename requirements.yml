@@ -2,3 +2,8 @@
   name: geerlinguy.homebrew
   version: 363678e # tag: 2.2.4
   path: galaxy_roles
+
+- src: https://github.com/fubarhouse/ansible-role-macdock.git
+  name: fubarhouse.macdock
+  version: 302bbdd # tag: 2.0.2
+  path: galaxy_roles
