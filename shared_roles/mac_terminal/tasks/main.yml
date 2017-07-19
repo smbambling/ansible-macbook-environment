@@ -15,4 +15,4 @@
     - defaults write com.apple.Terminal 'Default Window Settings' -string 'Peppermint'
     - defaults write com.apple.Terminal 'Startup Window Settings' -string 'Peppermint'
   changed_when: false
-  when: "'Peppermint ansi' not in terminal_theme.stdout"
+  when: "'Peppermint' not in terminal_theme.stdout"
