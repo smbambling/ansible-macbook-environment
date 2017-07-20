@@ -75,6 +75,7 @@ homebrew_installed_packages:
   - python
   - ssh-copy-id
   - readline
+  - reattach-to-user-namespace
   - rename
   - shellcheck
   - speedtest_cli
