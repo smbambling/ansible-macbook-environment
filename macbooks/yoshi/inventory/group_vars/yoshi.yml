@@ -101,3 +101,7 @@ homebrew_cask_apps:
   - vlc
   - vmware-fusion
   - xquartz
+
+system_global_gems:
+  - name: tmuxinator
+    version: 0.9.0

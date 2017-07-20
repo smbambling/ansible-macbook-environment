@@ -1,0 +1,8 @@
+- name: Install system global Ruby GEMs.
+  gem:
+    name: "{{ item.name | default(item) }}"
+    state: "{{ item.state | default('present') }}"
+    version: "{{ item.version | default(omit) }}"
+    user_install: no
+    executable: "{{ item.executable | default(omit) }}"
+  with_items: "{{ system_global_gems }}"

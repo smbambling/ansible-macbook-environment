@@ -4,9 +4,10 @@
 
   roles:
     - {role: fonts}
-    - {role: geerlinguy.homebrew}
+    - {role: geerlingguy.homebrew}
     - {role: mac_terminal}
     - {role: fubarhouse.macdock}
+    - {role: system_global_gems}
 
   post_tasks:
     - name: Set zsh as shell
