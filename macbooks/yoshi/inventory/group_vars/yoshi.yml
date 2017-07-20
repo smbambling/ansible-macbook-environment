@@ -32,6 +32,7 @@ homebrew_installed_packages:
   - augeas
   - colordiff
   - dockutil
+
   - fabric
   - geoip
   - gawk
@@ -96,6 +97,7 @@ homebrew_cask_apps:
   - unrarx
   - slack
   - the-unarchiver
+  - urlview
   - vagrant
   - virtualbox
   - vlc
