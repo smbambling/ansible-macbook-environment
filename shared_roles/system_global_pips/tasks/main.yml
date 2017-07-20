@@ -1,9 +1,7 @@
-- name: Install system global Ruby GEMs.
-  become: True
-  gem:
+- name: Install system global Python PIPs.
+  pip:
     name: "{{ item.name | default(item) }}"
     state: "{{ item.state | default('present') }}"
     version: "{{ item.version | default(omit) }}"
-    user_install: no
     executable: "{{ item.executable | default(omit) }}"
-  with_items: "{{ system_global_gems }}"
+  with_items: "{{ system_global_pips }}"
