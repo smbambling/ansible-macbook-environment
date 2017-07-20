@@ -1,0 +1,24 @@
+---
+- name: Ensure .vim dirs present
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: 0755
+    owner: "{{ ansible_user_id }}"
+  with_items:
+    - ~/.vim
+    - ~/.vim/autoload
+    - ~/.vim/bundle
+
+- name: Download pathogen
+  get_url:
+    url: https://tpo.pe/pathogen.vim
+    dest: ~/.vim/autoload/pathogen.vim
+    mode: 0644
+    owner: "{{ ansible_user_id }}"
+
+- name: Clone the vim plugins
+  git:
+    repo: "{{ item.value.source }}"
+    dest: "~/.vim/bundle/{{ item.key }}"
+  with_dict: "{{ pathogen_vim_plugins }}"

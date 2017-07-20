@@ -1,0 +1,25 @@
+---
+- name: Ensure tmux is on the system
+  homebrew:
+    name: tmux
+    state: present
+
+- name: Create the .tmux dir
+  file:
+    path: ~/.tmux
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    mode: 0755
+
+- name: Create the .tmux/plugins dir
+  file:
+    path: ~/.tmux/plugins
+    state: directory
+    owner: "{{ ansible_user_id }}"
+    mode: 0755
+
+- name: Git clone tpm
+  git:
+    repo: https://github.com/tmux-plugins/tpm
+    dest: ~/.tmux/plugins/tpm
+  notify: Run the tpm installer

@@ -1,0 +1,23 @@
+---
+- name: Clone oh-my-zsh
+  git:
+    repo: https://github.com/robbyrussell/oh-my-zsh.git
+    dest: "{{ omz_path }}"
+
+- name: Create the custom/themes folder
+  file:
+    path: "{{ omz_path}}/custom/themes"
+    state: directory
+    mode: 0755
+    owner: "{{ ansible_user_id }}"
+  when: omz_custom_themes is defined
+
+- name: Load custom theme files
+  copy:
+    src: "files/{{ item }}.zsh-theme"
+    dest: "{{ omz_path}}/custom/themes/{{ item }}.zsh-theme"
+    state: file
+    mode: 0644
+    owner: "{{ ansible_user_id }}"
+  with_items: "{{ omz_custom_themes }}"
+  when: omz_custom_themes|length > 0
