@@ -32,7 +32,6 @@ homebrew_installed_packages:
   - augeas
   - colordiff
   - dockutil
-
   - fabric
   - geoip
   - gawk
@@ -49,6 +48,7 @@ homebrew_installed_packages:
   - packer
   - ssh-copy-id
   - readline
+  - reattach-to-user-namespace
   - rename
   - shellcheck
   - speedtest_cli
