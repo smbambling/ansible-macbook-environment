@@ -1,0 +1,9 @@
+---
+- name: Remove dock items
+  hosts: starfish
+  connection: local
+  vars:
+    dockitems_remove_all: true
+
+  roles:
+    - {role: fubarhouse.macdock}

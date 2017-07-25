@@ -1,0 +1,127 @@
+---
+dotfiles_repo: "https://github.com/champain/osx_dotfiles.git"
+dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_local_destination: "~/sources/dotfiles"
+dotfiles_home: "~"
+dotfiles_files:
+  - .gitconfig
+  - .gitignore
+  - .tmux.conf
+  - .vimrc
+  - .gemrc
+  - .zshrc
+
+omz_custom_themes:
+  - bullet-train
+
+terminal_profiles:
+  - DimmedMonokai
+
+pathogen_vim_plugins:
+  vim-sensible:
+    source: https://github.com/tpope/vim-sensible.git
+  ansible-vim:
+    source: https://github.com/pearofducks/ansible-vim
+  jedi-vim:
+    source: https://github.com/davidhalter/jedi-vim.git
+  python-mode:
+    source: https://github.com/python-mode/python-mode.git
+  syntastic:
+    source: https://github.com/scrooloose/syntastic.git
+  sparkup:
+    source: https://github.com/rstacruz/sparkup.git
+  tabular:
+    source: https://github.com/godlygeek/tabular.git
+  vim-easymotion:
+    source: https://github.com/Lokaltog/vim-easymotion.git
+  vim-fugitive:
+    source: https://github.com/tpope/vim-fugitive.git
+  vim-indent-guides:
+    source: https://github.com/nathanaelkane/vim-indent-guides.git
+  vim-markdown:
+    source: https://github.com/plasticboy/vim-markdown.git
+  vim-puppet:
+    source: https://github.com/rodjek/vim-puppet.git
+  vim-rails:
+    source: https://github.com/tpope/vim-rails.git
+
+downloads: ~/.ansible-downloads/
+
+dockitems_enabled: []
+
+dockitems_disabled:
+  - all
+
+homebrew_installed_packages:
+  - autoconf
+  - aspell
+  - augeas
+  - colordiff
+  - dockutil
+  - fabric
+  - geoip
+  - gawk
+  - git
+  - hub
+  - ipcalc
+  - iperf
+  - jq
+  - minicom
+  - mtr
+  - nmap
+  - npm
+  - nvm
+  - packer
+  - python
+  - ssh-copy-id
+  - readline
+  - rename
+  - reattach-to-user-namespace
+  - shellcheck
+  - speedtest_cli
+  - ssh-copy-id
+  - task
+  - tig
+  - tmux
+  - watch
+  - weechat
+  - wget
+  - zsh-completions
+
+homebrew_taps:
+  - homebrew/core
+  - caskroom/cask
+  - homebrew/binary
+  - homebrew/dupes
+  - homebrew/versions
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - alfred
+  - burn
+  - docker
+  - dropbox
+  - easysimbl
+  - firefox
+  - google-chrome
+  - gpgtools
+  - handbrake
+  - istat-menus
+  - kdiff3
+  - little-snitch
+  - macdown
+  - makemkv
+  - qblocker
+  - ripit
+  - totalspaces
+  - tunnelblick
+  - ripit
+  - totalspaces
+  - unrarx
+  - slack
+  - the-unarchiver
+  - vagrant
+  - virtualbox
+  - vmware-fusion
+  - xquartz
+  - opera
