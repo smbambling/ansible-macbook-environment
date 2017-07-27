@@ -130,4 +130,6 @@ system_global_gems:
     version: 0.9.0
   - name: hiera-eyaml
     version: 2.1.0
+  - name: bundler
+    version: 1.15.3
 # }}}
