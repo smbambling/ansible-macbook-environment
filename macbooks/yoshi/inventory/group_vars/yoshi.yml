@@ -1,13 +1,21 @@
 ---
+# {{{ Fonts
 my_fonts:
   - hack
+# }}}
 
+# {{{ Terminal Profiles
 terminal_profiles:
   - Peppermint
+# }}}
 
 downloads: ~/.ansible-downloads/
 
+# {{{ Dock Items | Enabled
 dockitems_enabled: []
+# }}}
+
+# {{{ Dock Items | Disabled
 dockitems_disabled:
   - Siri
   - Launchpad
@@ -25,7 +33,9 @@ dockitems_disabled:
   - iBooks
   - App Store
   - System Preferences
+# }}}
 
+# {{{ Brew Packages
 homebrew_installed_packages:
   - autoconf
   - aspell
@@ -61,15 +71,19 @@ homebrew_installed_packages:
   - weechat
   - wget
   - zsh-completions
+# }}}
 
+# {{{ Brew Taps
 homebrew_taps:
   - homebrew/core
   - caskroom/cask
   - homebrew/binary
   - homebrew/dupes
   - homebrew/versions
+# }}}
 
 homebrew_cask_appdir: /Applications
+# {{{ Brew Cask Apps
 homebrew_cask_apps:
   - 1password
   - alfred
@@ -104,10 +118,16 @@ homebrew_cask_apps:
   - vlc
   - vmware-fusion
   - xquartz
+# }}}
 
+# {{{ Global Python PIPs
 system_global_pips: []
+# }}}
+
+# {{{ Global Ruby GEMs
 system_global_gems:
   - name: tmuxinator
     version: 0.9.0
   - name: hiera-eyaml
     version: 2.1.0
+# }}}
