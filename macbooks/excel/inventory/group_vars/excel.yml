@@ -1,0 +1,68 @@
+---
+dotfiles_repo: "https://github.com/champain/osx_dotfiles.git"
+dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_local_destination: "~/sources/dotfiles"
+dotfiles_home: "~"
+dotfiles_files:
+  - .gitconfig
+  - .gitignore
+  - .tmux.conf
+  - .vimrc
+  - .gemrc
+  - .zshrc
+
+omz_custom_themes:
+  - bullet-train
+
+terminal_profiles:
+  - DimmedMonokai
+
+pathogen_vim_plugins:
+  vim-sensible:
+    source: https://github.com/tpope/vim-sensible.git
+
+downloads: ~/.ansible-downloads/
+
+dockitems_enabled: []
+
+dockitems_disabled:
+  - Trash
+
+homebrew_installed_packages:
+  - autoconf
+  - mtr
+  - nmap
+  - npm
+  - nvm
+  - packer
+  - python
+  - ssh-copy-id
+  - readline
+  - shellcheck
+  - ssh-copy-id
+  - tmux
+  - weechat
+  - wget
+
+homebrew_taps:
+  - homebrew/core
+  - caskroom/cask
+  - homebrew/binary
+  - homebrew/dupes
+  - homebrew/versions
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - alfred
+  - burn
+  - docker
+  - dropbox
+  - opera
+
+system_global_gems:
+  - name: tmuxinator
+    version: 0.9.0
+  - name: hiera-eyaml
+    version: 2.1.0
+  - name: bundler
+    version: 1.15.3

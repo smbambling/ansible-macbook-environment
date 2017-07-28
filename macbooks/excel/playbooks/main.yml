@@ -1,0 +1,34 @@
+---
+- name: Install the excel testing stuff
+  hosts: excel
+  connection: local
+    
+  #Homebrew actually recommended
+  pre_tasks:
+
+    - name: make sure the sources dir exists
+      file:
+        path: ~/sources
+        state: directory
+        mode: 0755
+        owner: "{{ ansible_user_id }}"
+
+  roles:
+    - {role: geerlingguy.homebrew}
+    - {role: geerlingguy.dotfiles}
+    - {role: oh-my-zsh}
+    - {role: powerline}
+    - {role: tmux}
+    - {role: pathogen}
+    - {role: mac_terminal}
+    - {role: fubarhouse.macdock}
+    - {role: system_global_gems}
+    - {role: system_global_pips}
+
+  post_tasks:
+    - name: Require Password for Screen Saver immediately
+      command: defaults write com.apple.screensaver askForPasswordDelay 0
+
+    - name: Set zsh as shell
+      command: chsh -s /bin/zsh
+
