@@ -23,7 +23,6 @@
     - {role: mac_terminal}
     - {role: fubarhouse.macdock}
     - {role: system_global_gems}
-    - {role: system_global_pips}
 
   post_tasks:
     - name: Require Password for Screen Saver immediately
