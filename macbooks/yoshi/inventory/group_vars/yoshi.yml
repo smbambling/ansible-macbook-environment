@@ -67,6 +67,8 @@ homebrew_installed_packages:
   - tig
   - tmux
   - urlview
+  - virt-manager
+  - virt-viewer
   - watch
   - weechat
   - wget
@@ -80,6 +82,7 @@ homebrew_taps:
   - homebrew/binary
   - homebrew/dupes
   - homebrew/versions
+  - jeffreywildman/homebrew-virt-manager
 # }}}
 
 homebrew_cask_appdir: /Applications
