@@ -32,5 +32,8 @@
     - {role: fubarhouse.macdock}
 
   post_tasks:
+    - name: Require Password for Screen Saver immediately
+      command: defaults write com.apple.screensaver askForPasswordDelay 0
+
     - name: Set zsh as shell
       command: chsh -s /bin/zsh
