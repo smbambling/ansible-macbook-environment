@@ -33,4 +33,4 @@
 
   post_tasks:
     - name: Set zsh as shell
-      command: defaults write com.apple.Terminal 'Shell' -string '/bin/zsh'
+      command: chsh -s /bin/zsh
