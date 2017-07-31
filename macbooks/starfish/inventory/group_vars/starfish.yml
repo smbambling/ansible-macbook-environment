@@ -50,7 +50,22 @@ downloads: ~/.ansible-downloads/
 dockitems_enabled: []
 
 dockitems_disabled:
-  - all
+  - Siri
+  - Launchpad
+  - Contacts
+  - Notes
+  - Reminders
+  - Maps
+  - Photos
+  - Messages
+  - FaceTime
+  - Pages
+  - Numbers
+  - Keynote
+  - iTunes
+  - iBooks
+  - App Store
+  - System Preferences
 
 homebrew_installed_packages:
   - autoconf
