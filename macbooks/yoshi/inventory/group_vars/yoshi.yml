@@ -64,6 +64,7 @@ homebrew_installed_packages:
   - speedtest_cli
   - ssh-copy-id
   - task
+  - telnet
   - tig
   - tmux
   - urlview
