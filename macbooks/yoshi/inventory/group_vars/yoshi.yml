@@ -67,6 +67,7 @@ homebrew_installed_packages:
   - telnet
   - tig
   - tmux
+  - tmuxinator-completion
   - urlview
   - virt-manager
   - virt-viewer
